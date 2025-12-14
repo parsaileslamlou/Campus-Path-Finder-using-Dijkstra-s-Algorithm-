@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6C3C77272EEE9DA3009C2AAC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6C3C77262EEE9D9B009C2AAC /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		6C3C77082EEE98E7009C2AAC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,7 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6C3C770A2EEE98E7009C2AAC /* Dijkstra */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Dijkstra; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3C770A2EEE98E7009C2AAC /* Dijkstra */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Dijkstra; path = /Users/parsaileslamlou/Desktop/Dijkstra/build/Debug/Dijkstra; sourceTree = "<absolute>"; };
+		6C3C77262EEE9D9B009C2AAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,16 +50,8 @@
 			isa = PBXGroup;
 			children = (
 				6C3C770C2EEE98E7009C2AAC /* Dijkstra */,
-				6C3C770B2EEE98E7009C2AAC /* Products */,
+				6C3C77262EEE9D9B009C2AAC /* README.md */,
 			);
-			sourceTree = "<group>";
-		};
-		6C3C770B2EEE98E7009C2AAC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6C3C770A2EEE98E7009C2AAC /* Dijkstra */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +90,7 @@
 				TargetAttributes = {
 					6C3C77092EEE98E7009C2AAC = {
 						CreatedOnToolsVersion = 26.0.1;
+						LastSwiftMigration = 2600;
 					};
 				};
 			};
@@ -106,7 +104,7 @@
 			mainGroup = 6C3C77012EEE98E7009C2AAC;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 6C3C770B2EEE98E7009C2AAC /* Products */;
+			productRefGroup = 6C3C77012EEE98E7009C2AAC;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -120,6 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3C77272EEE9DA3009C2AAC /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,16 +243,21 @@
 		6C3C77122EEE98E7009C2AAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		6C3C77132EEE98E7009C2AAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
