@@ -1,0 +1,12 @@
+# Xcode
+DerivedData/
+*.xcuserstate
+*.xcuserdata/
+
+# macOS
+.DS_Store
+
+# C++ binaries
+*.out
+*.o
+build/
