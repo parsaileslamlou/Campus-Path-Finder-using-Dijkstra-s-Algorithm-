@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		6C3C77272EEE9DA3009C2AAC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6C3C77262EEE9D9B009C2AAC /* README.md */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		6C3C77082EEE98E7009C2AAC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -23,8 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6C3C770A2EEE98E7009C2AAC /* Dijkstra */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Dijkstra; path = /Users/parsaileslamlou/Desktop/Dijkstra/build/Debug/Dijkstra; sourceTree = "<absolute>"; };
-		6C3C77262EEE9D9B009C2AAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
+		6CA5E9AE2EEF5E1200CA664C /* Dijkstra */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Dijkstra; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -50,7 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				6C3C770C2EEE98E7009C2AAC /* Dijkstra */,
-				6C3C77262EEE9D9B009C2AAC /* README.md */,
+				6CA5E9AE2EEF5E1200CA664C /* Dijkstra */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +71,7 @@
 			packageProductDependencies = (
 			);
 			productName = Dijkstra;
-			productReference = 6C3C770A2EEE98E7009C2AAC /* Dijkstra */;
+			productReference = 6CA5E9AE2EEF5E1200CA664C /* Dijkstra */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +113,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3C77272EEE9DA3009C2AAC /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

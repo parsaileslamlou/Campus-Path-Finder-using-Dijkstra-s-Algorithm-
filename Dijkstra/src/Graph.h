@@ -8,7 +8,7 @@
 
 class Graph {
 public:
-    Graph(const std::string& filename);
+    explicit Graph(const std::string& filename);
     std::vector<std::pair<std::string, double>> getNeighbors(const std::string& node) const;
 private:
     void parseFile(const std::string& filename);

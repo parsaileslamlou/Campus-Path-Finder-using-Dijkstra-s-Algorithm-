@@ -19,7 +19,7 @@ std::vector<std::pair<std::string, double>> Graph::getNeighbors(const std::strin
 
 void Graph::parseFile(const std::string& filename){
     std::ifstream inFile;
-    inFile.open("data/campus_graph.txt");
+    inFile.open(filename);
     
     std::string str;
     std::string key;
