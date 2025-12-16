@@ -9,7 +9,6 @@ Graph::Graph(const std::string& filename){
     parseFile(filename);
 }
 
-//std::unordered_map<std::string, std::vector<std::pair<std::string, double>>> adjList;
 // Key is the starting Node, and value is an array of Nodes to visit with the weight
 std::vector<std::pair<std::string, double>> Graph::getNeighbors(const std::string& node) const{
     auto it = adjList.find(node);
@@ -17,7 +16,11 @@ std::vector<std::pair<std::string, double>> Graph::getNeighbors(const std::strin
     return {};
 }
 
-void Graph::parseFile(const std::string& filename){
+std::unordered_map<std::string, std::vector<std::pair<std::string, double>>> Graph::getList() const{
+    return adjList;
+}
+
+void Graph::parseFile(const std::string& filename){ 
     std::ifstream inFile;
     inFile.open(filename);
     
