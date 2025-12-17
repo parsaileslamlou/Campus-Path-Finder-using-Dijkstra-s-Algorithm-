@@ -24,7 +24,7 @@ Implements the shortest path finding algorithm.
 - **Initialization**: Sets all distances to $\infty$ and predecessors to null.
 - **Path Calculation**: Uses a Min-Priority Queue to iteratively find the shortest path from a starting node to all reachable nodes.
 - **Predecessor Tracking**: Stores the `prev` map to reconstruct the path after the algorithm finishes.
-- **Output**: Prints the resulting path (Start -> ... -> End) and the total weight.
+- **Output**: Returns a PathResult struct containing whether the destination was reachable, the reconstructed path, and the total accumulated weight.
 
 Ensures the most optimal route is found based on the defined edge weights.
 
