@@ -9,8 +9,8 @@
 #include <limits>
 #include "Dijkstra.h"
 
-Dijkstra::Dijkstra(const std::string& filename)
-    : graph(filename){
+Dijkstra::Dijkstra(const std::string& filename){
+    graph.loadFromFile(filename);
     Init();
 }
 
@@ -24,8 +24,17 @@ void Dijkstra::Init(){ //Intializes all helper containers to default Dijkstra fr
    
 }
 
-void Dijkstra::getPath(const std::string& start, const std::string& end){ //Using Dijkstra's algorithm to find best path
+Dijkstra::PathResult Dijkstra::computePath(const std::string& start, const std::string& end){ //Using Dijkstra's algorithm to find best path
+    PathResult result;
+    result.reachable = false;
+    result.weight = 0.0;
+    
+    if (!graph.containsNode(start) || !graph.containsNode(end)) {
+        return result; // edge check
+    }
+
     Init();  //Resets member variables in the case the program has ran before
+    
     dist[start] = 0;
     pq.push(PQItem{0,start});
     
@@ -33,8 +42,12 @@ void Dijkstra::getPath(const std::string& start, const std::string& end){ //Usin
     while(!pq.empty()){
         PQItem cur = pq.top();
         pq.pop();
+        
         double removed_dist = cur.first;
         std::string removed = cur.second;
+        
+        if (removed == end) break; //once removed fastest path found
+       
         visited[removed] = true;
         
         for(auto& edge : graph.getNeighbors(removed)){
@@ -49,12 +62,24 @@ void Dijkstra::getPath(const std::string& start, const std::string& end){ //Usin
     }
     
     if (dist[end] == std::numeric_limits<double>::infinity()) {
-        std::cout << "No path from " << start << " to " << end << "\n";
-        return;
+        return result; //reachable = false
     }
     
-    printPath(start, end);
-    std::cout << "\nWeight: " << dist[end] << std::endl;
+    std::vector<std::string> forwardPath;
+
+    std::string traversal = end;
+
+    while(traversal != start){
+        forwardPath.push_back(traversal);
+        traversal = prev.at(traversal);
+    }
+    forwardPath.push_back(start);
+    
+    std::reverse(forwardPath.begin(),forwardPath.end());
+    result.reachable = true;
+    result.path = forwardPath;
+    result.weight = dist[end];
+    return result;
 }
 
 void Dijkstra::printPath(const std::string& start, const std::string& end) const{ //helper to print best path

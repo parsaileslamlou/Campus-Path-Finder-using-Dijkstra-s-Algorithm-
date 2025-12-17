@@ -5,10 +5,13 @@
 #include <string>
 #include <fstream>
 
-Graph::Graph(const std::string& filename){
+void Graph::loadFromFile(const std::string& filename){
     parseFile(filename);
 }
 
+bool Graph::containsNode(const std::string& node) const {
+    return adjList.find(node) != adjList.end();
+}
 // Key is the starting Node, and value is an array of Nodes to visit with the weight
 std::vector<std::pair<std::string, double>> Graph::getNeighbors(const std::string& node) const{
     auto it = adjList.find(node);

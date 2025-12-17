@@ -13,9 +13,14 @@
 
 class Dijkstra {
     public:
+        struct PathResult{
+            bool reachable;
+            std::vector<std::string> path;
+            double weight;
+        };
         explicit Dijkstra(const std::string& filename);
-        void getPath(const std::string& start, const std::string& end);
-
+        PathResult computePath(const std::string& start, const std::string& end);
+    
     private:
         void Init();
         void printPath(const std::string& start, const std::string& end) const;

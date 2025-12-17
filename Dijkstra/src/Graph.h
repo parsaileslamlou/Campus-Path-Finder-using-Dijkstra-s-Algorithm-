@@ -8,9 +8,11 @@
 
 class Graph {
     public:
-        explicit Graph(const std::string& filename);
+        Graph() = default;
+        void loadFromFile(const std::string& filename);
         std::vector<std::pair<std::string, double>> getNeighbors(const std::string& node) const;
         std::unordered_map<std::string, std::vector<std::pair<std::string, double>>> getList() const;
+        bool containsNode(const std::string& node) const;
     private:
         void parseFile(const std::string& filename);
         std::unordered_map<std::string, std::vector<std::pair<std::string, double>>> adjList;
