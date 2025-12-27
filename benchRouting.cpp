@@ -106,12 +106,11 @@ int main() {
         return 1;
     }
 
-    const int trials = 5000;       // increase later (e.g. 1000) once everything is stable
+    const int trials = 5000;      
     const uint32_t seed = 42;
 
     auto pairs = makeRandomPairs(nodeIds, trials, seed);
 
-    // Instantiate algorithms (they load the same graph file internally)
     Dijkstra dij(file);
     Astar ast(file);
 
